@@ -22,7 +22,7 @@ async function main() {
         };
     } catch (e) {
         const {response} = e;
-        if(response && response.data) {
+        if (response && response.data) {
             return {
                 body: response.data,
                 statusCode: response.status
