@@ -1,0 +1,9 @@
+packages:
+    - name: twitter
+      functions:
+        - name: getLastThreeTweets
+          web: true
+          runtime: nodejs:18
+          environment:
+            TWITTER_USER_ID: "${TWITTER_USER_ID}"
+            TWITTER_BEARER_TOKEN: "${TWITTER_BEARER_TOKEN}"
