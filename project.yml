@@ -7,3 +7,10 @@ packages:
         environment:
           TWITTER_USER_ID: "${TWITTER_USER_ID}"
           TWITTER_BEARER_TOKEN: "${TWITTER_BEARER_TOKEN}"
+  - name: github
+    functions:
+      - name: getLastThreeRepos
+        web: true
+        runtime: nodejs:18
+        environment:
+          GITHUB_USERNAME: "${GITHUB_USERNAME}"
