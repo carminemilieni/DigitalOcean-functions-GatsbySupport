@@ -25,7 +25,7 @@ async function main() {
             body
         };
 
-    }  catch (e) {
+    } catch (e) {
         const {response} = e;
         if (response && response.data) {
             return {
