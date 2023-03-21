@@ -43,6 +43,8 @@ You can distribute these functions directly on Digitalocean Function
   installed [https://docs.digitalocean.com/reference/doctl/](https://docs.digitalocean.com/reference/doctl/)
 - You need to create a twitter app to use twitter
   features [http://developer.twitter.com/](http://developer.twitter.com/)
+- You need to create an access token to use the github api and grant the public_repo
+  scope ([Create new token here](https://github.com/settings/tokens/new))
 
 ## Setup
 
@@ -77,6 +79,7 @@ TWITTER_USER_ID=YOUR_USER_ID
 TWITTER_BEARER_TOKEN=YOUR_APP_BEARER_TOKEN
 #GITHUB
 GITHUB_USERNAME=YOUR_GITHUB_USERNAME
+GITHUB_ACCESS_TOKEN=YOUR_GITHUB_ACCESS_TOKEN
 ```
 
 ### Step5
@@ -122,7 +125,8 @@ You will get in response the distributed functions and their path:
 
 ```shell
 Deployed functions ('doctl sls fn get <funcName> --url' for URL):
-   - twitter/getLastThreeTweets
+  - github/getLastThreeRepos
+  - twitter/getLastThreeTweets
 ```
 
 Launch any http request to ${apiHost}/${funcName}

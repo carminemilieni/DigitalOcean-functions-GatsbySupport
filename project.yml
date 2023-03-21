@@ -14,3 +14,4 @@ packages:
         runtime: nodejs:18
         environment:
           GITHUB_USERNAME: "${GITHUB_USERNAME}"
+          GITHUB_ACCESS_TOKEN: "${GITHUB_ACCESS_TOKEN}"

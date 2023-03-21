@@ -31,9 +31,9 @@ possibile, nello specifico questo repository nasce per un problema molto banale,
 creare un widget ajax in grado di mostrare i miei ultimi tre twitt, questo non puó essere fatto nel frontend perché non
 posso essere esposte in chiaro le chiavi di autenticazioni twitter.
 
-Utilizzero le Functions di Digitalocean probabilmente anche per altre funzionalità.
+Utilizzerò le Functions di Digitalocean probabilmente anche per altre funzionalità.
 
-Puoi distribuire queste funzioni direttamete su Digitalocean Function
+Puoi distribuire queste funzioni direttamente su Digitalocean Function
 
 ## Requisiti
 
@@ -43,6 +43,8 @@ Puoi distribuire queste funzioni direttamete su Digitalocean Function
   Doctl [https://docs.digitalocean.com/reference/doctl/](https://docs.digitalocean.com/reference/doctl/)
 - Devi creare un app su Twitter per utilizzare le funzioni
   twitter [http://developer.twitter.com/](http://developer.twitter.com/)
+- Devi creare un access token per utilizzare le api github e garantire lo scope
+  public_repo ([Crea nuovo token qua](https://github.com/settings/tokens/new))
 
 ## Setup
 
@@ -77,6 +79,7 @@ TWITTER_USER_ID=YOUR_USER_ID
 TWITTER_BEARER_TOKEN=YOUR_APP_BEARER_TOKEN
 #GITHUB
 GITHUB_USERNAME=YOUR_GITHUB_USERNAME
+GITHUB_ACCESS_TOKEN=YOUR_GITHUB_ACCESS_TOKEN
 ```
 
 ### Step5
@@ -122,6 +125,7 @@ Otterrai in risposta le funzioni distribuite ed il loro percorso:
 
 ```shell
 Deployed functions ('doctl sls fn get <funcName> --url' for URL):
+  - github/getLastThreeRepos
   - twitter/getLastThreeTweets
 ```
 
